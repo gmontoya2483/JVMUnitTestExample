@@ -50,6 +50,9 @@ The following example shows how you might implement a local unit test class. The
 
 To test that components in your app return the expected results, use the [junit.Assert](http://junit.org/junit4/javadoc/latest/org/junit/Assert.html) methods to perform validation checks (or assertions) to compare the state of the component under test against some expected value. To make tests more readable, you can use ```Hamcrest matchers``` (such as the ```is()``` and ```equalTo()``` methods) to match the returned result against the expected result.
 
+## Asserts Examples
+
+See [JUnit Asserts](documentation/JUnit_asserts.md)
 
 
 

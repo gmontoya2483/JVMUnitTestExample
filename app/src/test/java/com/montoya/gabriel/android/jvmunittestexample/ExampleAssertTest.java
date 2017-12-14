@@ -15,13 +15,16 @@ import static org.hamcrest.CoreMatchers.either;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.everyItem;
 import static org.hamcrest.CoreMatchers.hasItems;
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.sameInstance;
 import static org.hamcrest.CoreMatchers.startsWith;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertThat;
@@ -49,13 +52,19 @@ public class ExampleAssertTest {
         String [] expected = {"Hola","Chau","Bla bla"};
         String [] actual = {"Hola","Chau","Bla bla"};
 
-        assertArrayEquals("failure - byte arrays not same", expected, actual);
+        assertArrayEquals("failure - Arrays not same", expected, actual);
     }
 
 
     @Test
     public void testAssertEquals(){
         assertEquals("failure - strings are not equal", "text", "text");
+    }
+
+
+    @Test
+    public void testAssertNotEquals(){
+        assertNotEquals("failure - integers are equal",3,2);
     }
 
 
@@ -83,7 +92,8 @@ public class ExampleAssertTest {
     @Test
     public void testAssertSame() {
         Integer aNumber = Integer.valueOf(768);
-        assertSame("should be same", aNumber, aNumber);
+        assertSame("should be same", aNumber,aNumber);
+        assertNotSame("shouldn´t be same",aNumber,Integer.valueOf(763));
     }
 
 
@@ -122,6 +132,16 @@ public class ExampleAssertTest {
         assertThat("good", anyOf(equalTo("bad"), equalTo("good")));
         assertThat(7, not(CombinableMatcher.<Integer> either(equalTo(3)).or(equalTo(4))));
         assertThat(new Object(), not(sameInstance(new Object())));
+    }
+
+
+    @Test
+    public void testAssertThatIs(){
+
+        assertThat("This is the reason", 3, is(3));
+        assertThat("This is the reason", 3, not(is(2)));
+        assertThat(3, not(is(2)));
+
     }
 
 
