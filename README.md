@@ -55,8 +55,46 @@ To test that components in your app return the expected results, use the [junit.
 See [JUnit Asserts](documentation/JUnit_asserts.md)
 
 
+## Test runners
+
+When a class is annotated with ```@RunWith``` or extends a class annotated with ```@RunWith```, JUnit will invoke the class it references to run the tests in that class instead of the runner built into JUnit.
 
 
+* The default runner is ```BlockJUnit4ClassRunner```
+* Annotating a class with ```@RunWith(JUnit4.class)``` will always invoke the default JUnit 4 runner in the current version of JUnit, this class aliases the current default JUnit 4 class runner.
+* [Test runners](https://github.com/junit-team/junit4/wiki/Test-runners)
+
+
+### Specialized Runners
+
+#### Suite
+
+* ```Suite``` is a standard runner that allows you to manually build a suite containing tests from many classes.
+* Details how to [Create and use Test Suites](documentation/test_suite.md)
+* More information at Aggregating tests in Suites page.
+* http://junit.org/javadoc/latest/org/junit/runners/Suite.html
+* See example: ```ExampleTestSuite``` class
+
+#### Parameterized
+
+* ```Parameterized``` is a standard runner that implements parameterized tests. When running a parameterized test class, instances are created for the cross-product of the test methods and the test data elements.
+* Details how to [Create and use Parameterized tests](documentation/parameters_runner.md)
+* More information at [Parameterized Tests](https://github.com/junit-team/junit4/wiki/Parameterized-tests) page.
+* See examples: ```ExampleParameterizedRunnerWithConstructor```, ```ExampleParameterizedRunnerWithInjection``` and ```ExampleParameterizedRunnerSingle``` classes
+
+#### Categories
+
+* ```Categories``` is a standard runner enabling subsets of tests tagged with certain categories to execute/be excluded from a given test run.
+* More information at [Categories](https://github.com/junit-team/junit4/wiki/Categories) and [Mkyong - JUnit - Categories Test](https://www.mkyong.com/unittest/junit-categories-test/) pages.
+* Details how to [Create and use Categories]()
 
 ## References
 [Building Local Unit Test](https://developer.android.com/training/testing/unit-testing/local-unit-tests.html)
+
+[JUnit 4](http://junit.org/junit4/)
+
+[JUnit 4 Cookbook](http://junit.org/junit4/cookbook.html)
+
+[JUnit 4 Frequently Asked Questins](http://junit.org/junit4/faq.html)
+
+

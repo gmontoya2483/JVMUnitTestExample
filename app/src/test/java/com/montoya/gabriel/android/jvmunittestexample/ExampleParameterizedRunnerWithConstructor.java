@@ -22,7 +22,6 @@ public class ExampleParameterizedRunnerWithConstructor {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {
-                //{ 0, 0 }, { 1, 2 }, { 2, 4 }, { 3, 6 }, { 4, 8 }, { 5, 10 }, { 6, 12 },{7,14},{8,16},{9,18},{10,20}
                 { new Suma(2,2), 4 }, { new Suma(3,7), 10 }
         });
     }

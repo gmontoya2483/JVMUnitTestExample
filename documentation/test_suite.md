@@ -1,4 +1,4 @@
-# Aggregating tests in suites
+# Create a Test Suite
 
 Using ```Suite``` as a runner allows you to manually build a suite containing tests from many classes. When you run this class, it will run all the tests in all the suite classes.
 
