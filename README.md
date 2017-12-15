@@ -50,6 +50,19 @@ The following example shows how you might implement a local unit test class. The
 
 To test that components in your app return the expected results, use the [junit.Assert](http://junit.org/junit4/javadoc/latest/org/junit/Assert.html) methods to perform validation checks (or assertions) to compare the state of the component under test against some expected value. To make tests more readable, you can use ```Hamcrest matchers``` (such as the ```is()``` and ```equalTo()``` methods) to match the returned result against the expected result.
 
+## Run Local Unit Test
+
+To run your local unit tests, follow these steps:
+
+1. Be sure your project is synchronized with Gradle by clicking ***Sync Project***  in the toolbar.
+2. Run your test in one of the following ways:
+    * To run a single test, open the **Project** window, and then right-click a test and click ***Run*** .
+    * To test all methods in a class, right-click a class or method in the test file and click ***Run*** .
+    * To run all tests in a directory, right-click on the directory and select ***Run tests*** .
+
+The Android Plugin for Gradle compiles the local unit test code located in the default directory (src/test/java/), builds a test app, and executes it locally using the default test runner class. Android Studio then displays the results in the Run window.
+
+
 ## Asserts Examples
 
 See [JUnit Asserts](documentation/JUnit_asserts.md)
