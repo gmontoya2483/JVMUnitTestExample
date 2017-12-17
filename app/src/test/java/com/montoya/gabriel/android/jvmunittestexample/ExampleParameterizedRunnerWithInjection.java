@@ -38,6 +38,4 @@ public class ExampleParameterizedRunnerWithInjection {
     public void StringContains(){
         assertThat("The substring is not contained in the string",fInput, containsString(fSubString));
     }
-
-
 }

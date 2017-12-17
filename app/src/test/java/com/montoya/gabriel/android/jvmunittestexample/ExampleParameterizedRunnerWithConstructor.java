@@ -51,16 +51,4 @@ public class ExampleParameterizedRunnerWithConstructor {
         assertEquals("The valor 2 is not correct: ",fExpected - fInput.getValor1(),fInput.getValor2());
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
