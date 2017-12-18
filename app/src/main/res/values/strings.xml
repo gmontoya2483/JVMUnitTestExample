@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JVMUnitTestExample</string>
+    <string name="hello_word">HELLO WORLD</string>
 </resources>

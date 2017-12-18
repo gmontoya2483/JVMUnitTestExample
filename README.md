@@ -100,6 +100,19 @@ When a class is annotated with ```@RunWith``` or extends a class annotated with 
 * ```Categories``` is a standard runner enabling subsets of tests tagged with certain categories to execute/be excluded from a given test run.
 * More information at [Categories](https://github.com/junit-team/junit4/wiki/Categories) and [Mkyong - JUnit - Categories Test](https://www.mkyong.com/unittest/junit-categories-test/) pages.
 * Details how to [Create and use Categories](documentation/categories_runner.md)
+* See examples: ```FunctionalTest```, ```IperformanceTest```, ```IRegressionTest```, ```ExampleCategoryOnClassLevel```, ```ExampleCategoryOnMethodLevel```, ```ExampleCategoryFunctionalTestSuite```, ```ExampleCategoryPerformanceTestSuite```, ```ExampleCategoryRegressionTestSuite```, ```ExampleCategoryWithExcludeTestSuite```, and ```ExampleCategoryWithoutCategoryTestSuite``` classes.
+
+### MockitoJUnitRunner
+
+By default, the Android Plug-in for Gradle executes your local unit tests against a modified version of the android.jar library, which does not contain any actual code. Instead, method calls to Android classes from your unit test throw an exception. This is to make sure you test only your code and do not depend on any particular behavior of the Android platform (that you have not explicitly mocked).
+
+You can use a mocking framework to stub out external dependencies in your code, to easily test that your component interacts with a dependency in an expected way. By substituting Android dependencies with mock objects, you can isolate your unit test from the rest of the Android system while verifying that the correct methods in those dependencies are called. The Mockito mocking framework for Java (version 1.9.5 and higher) offers compatibility with Android unit testing. With Mockito, you can configure mock objects to return some specific value when invoked.
+
+* Details how to [Create and use Mocked tests](documentation/mockito_runner.md)
+* See example ```ExampleMockitotest``` class.
+
+
+
 
 ## References
 [Building Local Unit Test](https://developer.android.com/training/testing/unit-testing/local-unit-tests.html)

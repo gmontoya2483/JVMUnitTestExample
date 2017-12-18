@@ -14,6 +14,8 @@ public class Suma {
         this.mValor2 = valor2;
     }
 
+
+
     public int getSuma(){
         return mValor1 + mValor2;
     }
