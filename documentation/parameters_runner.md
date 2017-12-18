@@ -2,7 +2,7 @@
 
 The use of the Parameterized runners allows to enter a set of inputs to be tested. During the execution, the program will iterate throw all the values and it will be return a result for each iteration.
 
-In order to define a parameterized the notation ```@RunWith``` must be set to ```Parameterized.class```, the ```@Parameters``` notation should define a Collection of objects as it is defined below:
+In order to define a parameterized runner, the annotation ```@RunWith``` must be set to ```Parameterized.class```, the ```@Parameters``` annotation should define a Collection of objects as it is defined below:
 
 
 ```java
@@ -171,7 +171,7 @@ public class ExampleParameterizedRunnerSingle {
 See the ```ExampleParameterizedRunnerSingle``` class example
 
 ## Identify Individual test cases
-In order to easily identify the individual test cases in a Parameterized test, you may provide a name using the @Parameters annotation. This name is allowed to contain placeholders that are replaced at runtime:
+In order to easily identify the individual test cases in a Parameterized test, you may provide a name using the ```@Parameters``` annotation. This name is allowed to contain placeholders that are replaced at runtime:
 
 * {index}: the current parameter index
 * {0}, {1}, …: the first, second, and so on, parameter value. NOTE: single quotes ' should be escaped as two single quotes ''.
