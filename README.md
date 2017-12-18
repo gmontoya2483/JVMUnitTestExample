@@ -99,7 +99,7 @@ When a class is annotated with ```@RunWith``` or extends a class annotated with 
 
 * ```Categories``` is a standard runner enabling subsets of tests tagged with certain categories to execute/be excluded from a given test run.
 * More information at [Categories](https://github.com/junit-team/junit4/wiki/Categories) and [Mkyong - JUnit - Categories Test](https://www.mkyong.com/unittest/junit-categories-test/) pages.
-* Details how to [Create and use Categories]()
+* Details how to [Create and use Categories](documentation/categories_runner.md)
 
 ## References
 [Building Local Unit Test](https://developer.android.com/training/testing/unit-testing/local-unit-tests.html)
